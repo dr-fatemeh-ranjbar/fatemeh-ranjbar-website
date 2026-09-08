@@ -1,59 +1,432 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me | Fatemeh Ranjbar</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>درباره من | About Fatemeh Ranjbar</title>
+
+  <meta name="description"
+    content="Fatemeh Ranjbar, PhD in Persian Language and Literature, researcher in Literary Sociology and Gender Studies in Literature and Society.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .about-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 55px 22px 80px;
+    }
+
+    .about-hero {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 45px;
+      align-items: center;
+      margin-bottom: 55px;
+    }
+
+    .profile-image-wrap {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #f1f1ed;
+      border: 1px solid #deded8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-fallback {
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 600;
+      color: #5c625d;
+      letter-spacing: 2px;
+    }
+
+    .about-name {
+      font-size: clamp(32px, 5vw, 54px);
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    .about-degree {
+      font-size: 18px;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+
+    .about-focus {
+      line-height: 1.9;
+      color: #555;
+      max-width: 760px;
+    }
+
+    .language-switch {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .language-switch button {
+      border: 1px solid #bbb;
+      background: transparent;
+      padding: 8px 18px;
+      border-radius: 24px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .language-switch button.active {
+      background: #222;
+      color: white;
+      border-color: #222;
+    }
+
+    .about-section {
+      margin-top: 48px;
+      padding-top: 10px;
+    }
+
+    .about-section h2 {
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .about-section p {
+      line-height: 2;
+      color: #444;
+    }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .interest-card {
+      border: 1px solid #e4e4df;
+      border-radius: 16px;
+      padding: 20px;
+      background: rgba(255,255,255,.55);
+    }
+
+    .interest-card strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .academic-card {
+      border-top: 1px solid #e3e3de;
+      padding: 18px 0;
+    }
+
+    .academic-card strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .en-content {
+      display: none;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .fa-content {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .photo-note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-image-wrap {
+        margin: 0 auto;
+        width: 175px;
+        height: 175px;
+      }
+
+      .language-switch {
+        justify-content: center;
+      }
+
+      .interest-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header class="site-header">
-<nav class="main-nav">
-<a href="index.html">خانه</a>
-<a href="about.html">درباره من</a>
-<a href="index.html#research">حوزه‌های پژوهشی</a>
-<a href="index.html#projects">پژوهش‌ها</a>
-<a href="index.html#publications">آثار علمی</a>
-<a href="index.html#contact">ارتباط</a>
-</nav>
+  <nav class="main-nav">
+    <a href="index.html">خانه / Home</a>
+    <a href="about.html">درباره من / About</a>
+    <a href="index.html#research">پژوهش‌ها / Research</a>
+    <a href="index.html#projects">پروژه‌ها / Projects</a>
+    <a href="index.html#publications">آثار علمی / Publications</a>
+    <a href="index.html#contact">ارتباط / Contact</a>
+  </nav>
 </header>
-<main class="page-content">
-<section>
-<div class="profile-placeholder">F</div>
-<h1>Fatemeh Ranjbar</h1>
-<p><strong>PhD in Persian Language and Literature</strong></p>
-<p dir="ltr">Researcher in Literary Sociology, Gender Studies in Literature and Society, and Cultural Studies</p>
 
-<h2>درباره من | About Me</h2>
-<p>
-فاطمه رنجبر، پژوهشگر حوزه ادبیات فارسی و مدرس دانشگاه است. تمرکز پژوهشی او بر جامعه‌شناسی ادبی،
-مطالعات جنسیت در ادبیات و جامعه، و مطالعات فرهنگی قرار دارد. پژوهش‌های او به بررسی ارتباط میان
-متون ادبی و ساختارهای اجتماعی، هویت‌های جنسیتی و تحولات فرهنگی می‌پردازد.
-</p>
-<p dir="ltr">
-Fatemeh Ranjbar is a researcher in Persian literature with a focus on literary sociology,
-gender studies in literature and society, and cultural studies. Her research explores the
-relationship between literary texts, social structures, gender identities, and cultural transformations.
-</p>
+<main class="about-page">
 
-<h2>Research Interests | حوزه‌های پژوهشی</h2>
-<ul>
-<li>Literary Sociology | جامعه‌شناسی ادبی</li>
-<li>Gender Studies in Literature and Society | مطالعات جنسیت در ادبیات و جامعه</li>
-<li>Literary Criticism and Theory | نقد ادبی و نظریه‌های ادبی</li>
-<li>Comparative Literature | ادبیات تطبیقی</li>
-<li>Cultural Studies | مطالعات فرهنگی</li>
-</ul>
+  <section class="about-hero">
 
-<h2>Academic Profile | پروفایل علمی</h2>
-<ul>
-<li>PhD in Persian Language and Literature</li>
-<li>University Lecturer at Semnan University</li>
-<li>Researcher in Humanities and Literary Studies</li>
-</ul>
+    <div>
+      <div class="profile-image-wrap">
+        <img
+          src="images/profile.jpg"
+          alt="Fatemeh Ranjbar"
+          class="profile-image"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="profile-fallback">FR</div>
+      </div>
 
-<p>برای افزودن تصویر جدید، فایل عکس آینده را با نام <b>profile.jpg</b> در پوشه <b>images</b> قرار دهید.</p>
-</section>
+      <div class="photo-note">
+        Profile Photo
+      </div>
+    </div>
+
+    <div>
+      <h1 class="about-name">Fatemeh Ranjbar</h1>
+
+      <p class="about-degree">
+        PhD in Persian Language and Literature
+      </p>
+
+      <p class="about-focus">
+        Researcher in Literary Sociology and Gender Studies in Literature and Society
+        | University Lecturer
+      </p>
+
+      <div class="language-switch">
+        <button id="faBtn" class="active" onclick="showPersian()">فارسی</button>
+        <button id="enBtn" onclick="showEnglish()">English</button>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Persian Version -->
+
+  <div id="faContent" class="fa-content">
+
+    <section class="about-section">
+
+      <h2>درباره من</h2>
+
+      <p>
+        فاطمه رنجبر، دارای دکترای زبان و ادبیات فارسی و پژوهشگر حوزه
+        جامعه‌شناسی ادبی و مطالعات جنسیت در ادبیات و جامعه است.
+        تمرکز پژوهشی او بر بررسی رابطه میان ادبیات، ساختارهای اجتماعی،
+        فرهنگ و هویت‌های جنسیتی قرار دارد.
+      </p>
+
+      <p>
+        پژوهش‌های او به مطالعه بازنمایی روابط قدرت، جنسیت، هویت،
+        تحولات اجتماعی و فرهنگی در متون ادبی می‌پردازد و تلاش می‌کند
+        ادبیات را نه تنها به‌عنوان یک پدیده زیبایی‌شناختی، بلکه به‌عنوان
+        بخشی از ساختار اجتماعی و فرهنگی جامعه تحلیل کند.
+      </p>
+
+    </section>
+
+
+    <section class="about-section">
+
+      <h2>حوزه‌های پژوهشی</h2>
+
+      <div class="interest-grid">
+
+        <div class="interest-card">
+          <strong>جامعه‌شناسی ادبی</strong>
+          بررسی رابطه میان ادبیات، جامعه و ساختارهای اجتماعی.
+        </div>
+
+        <div class="interest-card">
+          <strong>مطالعات جنسیت در ادبیات و جامعه</strong>
+          مطالعه بازنمایی جنسیت، زنانگی، مردانگی و روابط قدرت در ادبیات و فرهنگ.
+        </div>
+
+        <div class="interest-card">
+          <strong>نقد و نظریه ادبی</strong>
+          مطالعه و کاربرد رویکردهای نظری معاصر در تحلیل متون ادبی.
+        </div>
+
+        <div class="interest-card">
+          <strong>مطالعات فرهنگی</strong>
+          بررسی ارتباط ادبیات با فرهنگ، هویت و تحولات اجتماعی.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="about-section">
+
+      <h2>پروفایل علمی</h2>
+
+      <div class="academic-card">
+        <strong>دکترای زبان و ادبیات فارسی</strong>
+        Persian Language and Literature
+      </div>
+
+      <div class="academic-card">
+        <strong>مدرس دانشگاه</strong>
+        دانشگاه سمنان
+      </div>
+
+      <div class="academic-card">
+        <strong>پژوهشگر علوم انسانی و مطالعات ادبی</strong>
+        با تمرکز بر جامعه‌شناسی ادبی و مطالعات جنسیت
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- English Version -->
+
+  <div id="enContent" class="en-content">
+
+    <section class="about-section">
+
+      <h2>About Me</h2>
+
+      <p>
+        Fatemeh Ranjbar holds a PhD in Persian Language and Literature
+        and works as a researcher in Literary Sociology and Gender Studies
+        in Literature and Society.
+      </p>
+
+      <p>
+        Her research focuses on the relationship between literature,
+        social structures, culture, gender identities, and power relations.
+        She approaches literary texts not only as aesthetic works but also
+        as cultural and social documents through which broader transformations
+        in society can be examined.
+      </p>
+
+    </section>
+
+
+    <section class="about-section">
+
+      <h2>Research Interests</h2>
+
+      <div class="interest-grid">
+
+        <div class="interest-card">
+          <strong>Literary Sociology</strong>
+          Exploring the relationship between literary texts and social structures.
+        </div>
+
+        <div class="interest-card">
+          <strong>Gender Studies in Literature and Society</strong>
+          Examining gender representation, identity, and power relations
+          in literature and culture.
+        </div>
+
+        <div class="interest-card">
+          <strong>Literary Criticism and Theory</strong>
+          Applying contemporary theoretical approaches to literary analysis.
+        </div>
+
+        <div class="interest-card">
+          <strong>Cultural Studies</strong>
+          Studying the intersections of literature, culture, identity,
+          and social transformation.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="about-section">
+
+      <h2>Academic Profile</h2>
+
+      <div class="academic-card">
+        <strong>PhD in Persian Language and Literature</strong>
+      </div>
+
+      <div class="academic-card">
+        <strong>University Lecturer</strong>
+        Semnan University
+      </div>
+
+      <div class="academic-card">
+        <strong>Researcher in Humanities and Literary Studies</strong>
+        Specializing in Literary Sociology and Gender Studies
+      </div>
+
+    </section>
+
+  </div>
+
 </main>
+
+
+<script>
+
+function showPersian() {
+
+  document.getElementById("faContent").style.display = "block";
+  document.getElementById("enContent").style.display = "none";
+
+  document.getElementById("faBtn").classList.add("active");
+  document.getElementById("enBtn").classList.remove("active");
+
+  document.documentElement.lang = "fa";
+  document.documentElement.dir = "rtl";
+}
+
+
+function showEnglish() {
+
+  document.getElementById("faContent").style.display = "none";
+  document.getElementById("enContent").style.display = "block";
+
+  document.getElementById("enBtn").classList.add("active");
+  document.getElementById("faBtn").classList.remove("active");
+
+  document.documentElement.lang = "en";
+  document.documentElement.dir = "ltr";
+}
+
+</script>
+
 </body>
 </html>
