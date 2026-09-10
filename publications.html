@@ -2,115 +2,161 @@
 <html lang="fa" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>آثار علمی | فاطمه رنجبر</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="آثار علمی، مقالات و نوشته‌های پژوهشی فاطمه رنجبر">
+<title>آثار علمی | فاطمه رنجبر</title>
 
-  <link rel="stylesheet" href="styles.css">
+<meta name="description"
+content="آثار علمی، مقالات و نوشته‌های پژوهشی فاطمه رنجبر">
 
-  <style>
+<link rel="stylesheet" href="styles.css">
 
-    .publications-page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 55px 22px 80px;
-    }
 
-    .publications-hero {
-      margin-bottom: 55px;
-    }
+<style>
 
-    .publications-title {
-      font-size: clamp(32px, 5vw, 54px);
-      margin-bottom: 15px;
-    }
+.publications-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 22px 80px;
+}
 
-    .publications-intro {
-      line-height: 2;
-      color: #555;
-      max-width: 850px;
-    }
 
-    .publication-section {
-      margin-top: 50px;
-    }
+.publications-hero {
+  margin-bottom: 60px;
+}
 
-    .publication-section h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
 
-    .publication-card {
-      border: 1px solid #e4e4df;
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 18px;
-      background: rgba(255,255,255,.55);
-    }
+.publications-title {
+  font-size: clamp(32px,5vw,54px);
+  margin:0 0 18px;
+}
 
-    .publication-card strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
 
-    .publication-card p {
-      line-height: 2;
-      color: #444;
-      margin: 5px 0;
-    }
+.publications-intro {
+  color:#555;
+  line-height:2;
+  max-width:850px;
+}
 
-    .publication-link {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 18px;
-      border-radius: 24px;
-      border: 1px solid #222;
-      color: #222;
-      text-decoration: none;
-    }
 
-    .publication-link:hover {
-      background: #222;
-      color: white;
-    }
+.publication-section {
+  margin-top:55px;
+}
 
-  </style>
+
+.publication-section h2 {
+  font-size:26px;
+  margin-bottom:22px;
+}
+
+
+.publication-box {
+
+border:1px solid #e4e4df;
+border-radius:16px;
+padding:25px;
+background:rgba(255,255,255,.55);
+line-height:2;
+
+}
+
+
+.publication-box p {
+color:#555;
+margin:0;
+}
+
+
+
+.empty-note {
+
+text-align:center;
+padding:35px 20px;
+color:#666;
+
+}
+
+
+
+.category-grid {
+
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+
+}
+
+
+
+.category-card {
+
+border:1px solid #e4e4df;
+border-radius:16px;
+padding:22px;
+background:rgba(255,255,255,.55);
+
+}
+
+
+.category-card strong {
+
+display:block;
+font-size:18px;
+margin-bottom:10px;
+
+}
+
+
+@media(max-width:760px){
+
+.category-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+
+</style>
+
 
 </head>
+
 
 
 <body>
 
 
+
 <header class="site-header">
 
-  <nav class="main-nav">
+<nav class="main-nav">
 
-    <a href="index.html">خانه / Home</a>
+<a href="index.html">خانه / Home</a>
 
-    <a href="about.html">درباره من / About</a>
+<a href="about.html">درباره من / About</a>
 
-    <a href="research.html">پروفایل پژوهشی / Research</a>
+<a href="research.html">پروفایل پژوهشی / Research</a>
 
-    <a href="publications.html">آثار علمی / Publications</a>
+<a href="publications.html">آثار علمی / Publications</a>
 
-    <a href="index.html#contact">ارتباط / Contact</a>
+<a href="index.html#contact">ارتباط / Contact</a>
 
-  </nav>
+
+</nav>
 
 </header>
+
 
 
 
 <main class="publications-page">
 
 
+
 <section class="publications-hero">
+
 
 <h1 class="publications-title">
 آثار علمی
@@ -120,10 +166,11 @@
 <p class="publications-intro">
 
 در این بخش مجموعه‌ای از مقالات، نوشته‌ها و دستاوردهای علمی ارائه می‌شود.
-این صفحه به‌عنوان آرشیوی از فعالیت‌های علمی و انتشاراتی،
+این صفحه به عنوان آرشیوی از فعالیت‌های علمی و انتشاراتی،
 مسیر پژوهشی و آثار منتشرشده را نمایش می‌دهد.
 
 </p>
+
 
 </section>
 
@@ -131,42 +178,21 @@
 
 
 <section class="publication-section">
+
 
 <h2>
 مقالات علمی
 </h2>
 
 
-<div class="publication-card">
+<div class="publication-box">
 
-<strong>
-عنوان مقاله
-</strong>
+<p class="empty-note">
 
+مقالات علمی منتشرشده در این بخش قرار خواهند گرفت.
+هر مقاله شامل اطلاعات کتاب‌شناختی، مشخصات انتشار و لینک دسترسی به نسخه اصلی خواهد بود.
 
-<p>
-نویسندگان:
 </p>
-
-
-<p>
-نام نشریه / محل انتشار:
-</p>
-
-
-<p>
-سال انتشار:
-</p>
-
-
-<p>
-توضیح کوتاه درباره مقاله
-</p>
-
-
-<a class="publication-link" href="#" target="_blank">
-مشاهده مقاله اصلی
-</a>
 
 
 </div>
@@ -178,20 +204,27 @@
 
 
 
+
 <section class="publication-section">
+
 
 <h2>
 کتاب‌ها و تألیفات
 </h2>
 
 
-<div class="publication-card">
+<div class="publication-box">
+
 
 <p>
-در این بخش کتاب‌ها، فصل‌های کتاب، ترجمه‌ها و سایر آثار مکتوب علمی قرار خواهند گرفت.
+
+در این بخش کتاب‌ها، فصل‌های کتاب، ترجمه‌ها و سایر آثار مکتوب علمی ارائه خواهند شد.
+
 </p>
 
+
 </div>
+
 
 </section>
 
@@ -199,18 +232,41 @@
 
 
 
+
+
 <section class="publication-section">
 
+
 <h2>
-مقالات کنفرانسی و ارائه‌های علمی
+فعالیت‌های علمی و ارائه‌ها
 </h2>
 
 
-<div class="publication-card">
+<div class="category-grid">
 
-<p>
-ارائه‌های علمی، مقالات کنفرانسی و فعالیت‌های مرتبط در این بخش نمایش داده می‌شوند.
-</p>
+
+<div class="category-card">
+
+<strong>
+مقالات کنفرانسی
+</strong>
+
+ارائه‌ها و مقالات ارائه‌شده در همایش‌ها و نشست‌های علمی.
+
+</div>
+
+
+
+<div class="category-card">
+
+<strong>
+سخنرانی‌ها و کارگاه‌ها
+</strong>
+
+فعالیت‌های علمی، سخنرانی‌ها و برنامه‌های آموزشی تخصصی.
+
+</div>
+
 
 </div>
 
@@ -221,23 +277,31 @@
 
 
 
+
+
 <section class="publication-section">
+
 
 <h2>
 سایر آثار علمی
 </h2>
 
 
-<div class="publication-card">
+<div class="publication-box">
+
 
 <p>
-سایر فعالیت‌ها و دستاوردهای علمی در این بخش قرار خواهند گرفت.
+
+سایر نوشته‌ها، فعالیت‌های علمی و دستاوردهای پژوهشی در این بخش اضافه خواهند شد.
+
 </p>
+
 
 </div>
 
 
 </section>
+
 
 
 
