@@ -82,6 +82,15 @@ window.DEFAULT_SITE_DATA = {
     }
   ],
   "publications": [],
+  "media": [
+  {
+    "type": "سخنرانی",
+    "title": "نمونه سخنرانی علمی",
+    "date": "۱۴۰۵",
+    "desc": "ارائه علمی در نشست‌ها و همایش‌های دانشگاهی",
+    "link": ""
+  }
+],
   "appearance": {
     "primaryColor": "#16483f",
     "accentColor": "#b18a4b",
