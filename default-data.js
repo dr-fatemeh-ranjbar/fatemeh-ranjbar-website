@@ -108,6 +108,7 @@ window.DEFAULT_SITE_DATA = {
       "projects": true,
       "experience": true,
       "publications": true,
+"media": true,
       "contact": true
     },
     "order": [
@@ -116,6 +117,7 @@ window.DEFAULT_SITE_DATA = {
       "projects",
       "experience",
       "publications",
+      "media",
       "contact"
     ]
   }
